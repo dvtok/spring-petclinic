@@ -21,5 +21,6 @@ node {
     stage('Results') {
         junit '**/target/surefire-reports/TEST-*.xml'
         archiveArtifacts 'target/*.jar'
+        emailext body: '123', subject: '123', to: 'dimatokarev@gmail.com'
     }
 }
